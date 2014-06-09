@@ -3,7 +3,7 @@
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
-$(function() {
+window.pushyInit = function() {
 	var pushy = $('.pushy'), //menu css class
 		body = $('body'),
 		container = $('#container'), //container css class
@@ -44,7 +44,7 @@ $(function() {
 			togglePushy();
 		});
 		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
+		siteOverlay.click(function(){
 			togglePushy();
 		});
 	}else{
@@ -67,7 +67,7 @@ $(function() {
 		});
 
 		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
+		siteOverlay.click(function(){
 			if (state) {
 				openPushyFallback();
 				state = false;
@@ -77,4 +77,4 @@ $(function() {
 			}
 		});
 	}
-});
+};
