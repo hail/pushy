@@ -40,7 +40,8 @@ window.pushyInit = function() {
 
 	if(Modernizr.csstransforms3d){
 		//toggle menu
-		menuBtn.click(function() {
+		menuBtn.click(function(e) {
+			e.preventDefault();
 			togglePushy();
 		});
 		//close menu when clicking site overlay
@@ -56,7 +57,8 @@ window.pushyInit = function() {
 		var state = true;
 
 		//toggle menu
-		menuBtn.click(function() {
+		menuBtn.click(function(e) {
+			e.preventDefault();
 			if (state) {
 				openPushyFallback();
 				state = false;
